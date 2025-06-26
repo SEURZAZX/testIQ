@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tes IQ - IQ Challenge</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="background-gradient"></div>
+
+    <div class="container test-container">
+      <header class="test-header">
+        <h1 class="main-title">IQ Challenge</h1>
+        <div class="user-info">
+          Halo, <span id="loggedInUser" class="highlight-text"></span>!
+        </div>
+        <div class="progress-info">
+          Soal <span id="currentQuestionNumber">1</span> dari
+          <span id="totalQuestions">0</span>
+        </div>
+      </header>
+
+      <main class="test-area">
+        <div id="questionScreen" class="screen active">
+          <div class="card question-card">
+            <p id="questionText" class="question-text"></p>
+            <div id="optionsContainer" class="options-grid"></div>
+          </div>
+          <button
+            id="nextQuestionButton"
+            class="action-button next-button hidden"
+          >
+            Soal Berikutnya
+          </button>
+        </div>
+
+        <div id="resultScreen" class="screen hidden">
+          <div class="card result-card">
+            <h2 class="card-title">Hasil Tes IQ Anda:</h2>
+            <p class="result-score">
+              Skor Anda:
+              <span id="finalScore" class="highlight-text">0</span> poin
+            </p>
+            <p id="iqInterpretation" class="iq-interpretation"></p>
+          </div>
+          <button id="retakeTestButton" class="action-button retake-button">
+            Ulangi Tes
+          </button>
+          <button id="logoutButton" class="action-button logout-button-small">
+            Logout
+          </button>
+        </div>
+      </main>
+
+      <footer class="main-footer">
+        <p>&copy; 2025 IQ Challenge. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
